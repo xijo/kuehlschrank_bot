@@ -39,6 +39,8 @@ config :ex_aws,
     region: "eu-west-1",
   ]
 
+config :kuehlschrank, :telegram_bot, System.get_env("TELEGRAM_BOT")
+
 config :kuehlschrank, KuehlschrankWeb.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base
